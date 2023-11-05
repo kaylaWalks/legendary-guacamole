@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Totoro 🎬</title>
+    <style>
+      h1 {
+        text-align: center;
+        color: #577341;
+        font-weight: 100%;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        font-size: 50px;
+      }
+      h2 {
+        text-align: center;
+        border: 5px dotted rgb(86, 114, 64);
+        padding: 15px;
+        font-size: 18px;
+        border-radius: 15px;
+        color: #dc9946;
+        box-shadow: 12px 12px 2px 1px rgba(86, 114, 64, 30%);
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        border-radius: 30px;
+        width: "100%";
+      }
+
+      p {
+        line-height: 1.8;
+        font-size: 17px;
+        margin: 0 0 10px;
+        font-weight: bold;
+        flex-grow: 1;
+      }
+
+      button {
+        display: block;
+        margin: 25px auto;
+        background-color: #577341;
+        color: white;
+        font-size: 24px;
+        padding: 20px 30px;
+        border: none;
+        border-radius: 20px;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+        transition: all 400ms ease-in-out;
+      }
+      button:hover {
+        opacity: 0.9;
+        cursor: help;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 30px 60px;
+        background: linear-gradient(
+          180.3deg,
+          rgb(214, 224, 255) 37.2%,
+          rgb(254, 168, 168) 137.3%
+        );
+        border-radius: 50px;
+        display: flex;
+        flex-direction: column;
+      }
+      .hype {
+        font-size: larger;
+        color: #4f140a;
+      }
+      .learn-more {
+        color: #577341;
+        text-decoration: none;
+        font-size: 15px;
+      }
+
+      .learn-more:hover {
+        text-decoration: underline;
+      }
+      .footer {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Studio Ghibli is <span class="hype">hype af</span></h1>
+      <h2>We got <strong>Totoro </strong>in the game!</h2>
+      <br />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/099/560/original/totoro_scream.jpeg?1696799880"
+        alt="Totoro Scream"
+      />
+      <br />
+      <p>
+        <em>My Neighbor Totoro</em> (Japanese: となりのトトロ, Hepburn: Tonari
+        no Totoro) is a 1988 Japanese animated fantasy film written and directed
+        by Hayao Miyazaki and animated by Studio Ghibli for Tokuma Shoten. The
+        film stars voice actors Noriko Hidaka, Chika Sakamoto, and Hitoshi
+        Takagi, and tells the story of a professor's young daughters Satsuki and
+        Mei, and their interactions with friendly wood spirits in postwar rural
+        Japan.
+      </p>
+      <a
+        href="https://en.wikipedia.org/wiki/My_Neighbor_Totoro"
+        target="_blank"
+        class="learn-more"
+      >
+        Learn more on wikipedia
+      </a>
+      <hr />
+      <button class="buy-button">Join the fan club!</button>
+      <p class="footer">
+        This page was built by
+        <a
+          href="https://www.linkedin.com/in/stefani-sedano-b46594286/"
+          target="_blank"
+        >
+          Stefani Sedano
+        </a>
+      </p>
+    </div>
+    <script>
+      function buy() {
+        let name = prompt("What is your name?");
+        let favorite = prompt("What is your favorite Studio Ghibli movie?");
+        let email = prompt("What is your email?");
+
+        if (favorite === "" && name === "" && email === "") {
+          alert("Lame-o! Participate! 💢");
+        } else {
+          alert(
+            "Thank you, " +
+              name +
+              "! We'll be your best friends and chat about " +
+              favorite +
+              " later! 🎨"
+          );
+        }
+      }
+
+      let buyButton = document.querySelector(".buy-button");
+      buyButton.addEventListener("click", buy);
+    </script>
+  </body>
+</html>

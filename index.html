@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🎨 Painting - My Hobby 💉</title>
+
+    <style>
+      body {
+        background: radial-gradient(
+          755px at 10.1% 95.3%,
+          rgb(242, 188, 141) 0%,
+          rgb(242, 159, 141) 100.2%
+        );
+      }
+      h1 {
+        text-align: center;
+      }
+      h2 {
+        text-align: center;
+      }
+      img {
+        max-width: 100%;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        background-color: rgb(182, 96, 21);
+        border-radius: 25px;
+        font-size: 15px;
+        padding: 10px 20px;
+        transition: all 175ms ease-in-out;
+        border: 1px rgb(19, 19, 19) solid;
+      }
+      button:hover {
+        background: lightpink;
+        cursor: grab;
+      }
+      .container {
+        max-width: 600px;
+        background: rgb(182, 99, 99);
+        padding: 25px;
+        border-radius: 14px;
+        padding: 10px 15px;
+        margin: 0 auto;
+      }
+      footer {
+        text-align: center;
+        margin: 10px auto;
+        padding: 10px 15px;
+        font-size: 19px;
+      }
+
+      .theme-button {
+        font-size: 15px;
+        background: #b66014;
+        color: black;
+        padding: 10px;
+      }
+      .theme-button:hover {
+        color: green;
+        background: white;
+      }
+      .skeletonPainting {
+        border-radius: 10px;
+        transition: all 200ms ease-in-out;
+      }
+      .skeletonPainting:hover {
+        filter: contrast(70%);
+        transform: scale(1.1);
+      }
+      .heart-emoji {
+        display: block;
+        font-size: 15px;
+        transition: all 150ms ease-in-out;
+      }
+      .heart-emoji:hover {
+        transform: scale(1.9);
+      }
+      p {
+        font-size: 19px;
+      }
+      .grid {
+        margin: 14px 0;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 15px;
+      }
+      .grid img {
+        width: 100%;
+        border-radius: 15px;
+        object-fit: contain;
+        transition: all 250ms ease-in-out;
+      }
+      .grid img:hover {
+        transform: scale(2.3);
+      }
+      .dark {
+        background: linear-gradient(
+          110.3deg,
+          rgb(238, 179, 123) 8.7%,
+          rgb(216, 103, 77) 47.5%,
+          rgb(114, 43, 54) 89.1%
+        );
+        color: white;
+      }
+      .dark .container {
+        background: rgb(78, 56, 41);
+      }
+      .dark a {
+        color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="theme-button">Dark Theme</button>
+    <br />
+    <div class="container">
+      <h1>🎨 Painting</h1>
+      <h2>My absolute favorite hobby</h2>
+
+      <a
+        href="https://www.architecturaldigest.com/story/how-to-paint-a-room-10-steps"
+        target="_blank"
+      >
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/100/811/original/actionvance-vjUokUWbFOs-unsplash.jpg?1697429155"
+          alt=""
+          class="skeletonPainting"
+        />
+      </a>
+      <div class="grid">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/100/828/original/ronnie-overgoor-zaZbNrwt2kg-unsplash.jpg?1697438074"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/100/813/original/khara-woods-KR84RpMCb0w-unsplash.jpg?1697429186"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/100/814/original/ricardo-viana--tYsPFKMm7g-unsplash.jpg?1697429214"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/100/815/original/russn_fckr-krV5aS4jDjA-unsplash.jpg?1697429228"
+          alt=""
+        />
+      </div>
+      <p>
+        Creating art can generate a relaxation response and improve mood. Why?
+        Creative activity increases brain levels of the nuerotransmitter
+        serotonin. When this is missing, it can result in extreme sadness. Art
+        therapy can not only help the brain produce more serotonin, but also
+        reduce stress hormones such as cortisol. It provides benefits for both
+        adults and children with ADHD. And it can be used in conjunction with
+        other ADHD treatment options.
+      </p>
+      <a
+        href="https://edgefoundation.org/using-the-artist-within-to-moderate-adhd-symptoms/#:~:text=Art%20therapy%20can%20not%20only,adults%20and%20children%20with%20ADHD."
+        target="_blank"
+      >
+        📚 Read more...</a
+      >
+
+      <button>Learn to Paint</button>
+    </div>
+    <footer>
+      Coded with
+      <span class="heart-emoji">💖</span>
+      by
+      <a href="www.linkedin.com/in/stefani-sedano-" target="_blank"
+        >Stefani Sedano</a
+      >
+    </footer>
+
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+
+      let themeButton = document.querySelector(".theme-button");
+      themeButton.addEventListener("click", changeTheme);
+    </script>
+  </body>
+</html>
